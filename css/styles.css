@@ -1,0 +1,98 @@
+:root {
+  --black: 0xFF141414;
+  --white: 0xFFFFFFFF;
+  --darkgray: 0xFF1E2827;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  font-size: 60px;
+  letter-spacing: 0.03em;
+  background-color: #fff;
+}
+
+.about-heading h2 {
+  font-family: Epilogue;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 44px; /*110%*/
+  letter-spacing: -0.8px;
+}
+
+.hp-about {
+  padding: 0 20px;
+}
+
+.hp-about .container {
+  display: inline-flex;
+  /* display: grid; */
+  /* grid-template-columns:  auto 1fr; */
+  gap: 30px 110px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.about-section {
+  padding: 80px 132px;
+  display: inline-flex;
+  column-gap: 110px;
+  flex-wrap: wrap;
+}
+
+article {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  gap: 40px;
+}
+.about-section article p {
+  color: #141414;
+  font-family: Epilogue;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 18px;
+  margin: 0 0 20px;
+  letter-spacing: -0.28px;
+}
+
+.about-section figure {
+  margin: 30px 0 0;
+}
+
+.about-section figure img {
+  width: 100%;
+}

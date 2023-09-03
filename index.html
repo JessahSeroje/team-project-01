@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>the-watch-spot</title>
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600&family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Normalizer -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css"
+  </head>
+  <body>
+    <!-- About Us Section -->
+    <section class="hp-about">
+      <div class="about-section">
+        <section class="about-heading">
+          <h2>About us</h2>
+        </section>
+
+        <article>
+          <p class="description">
+            Welcome to our premium watch collection, where luxury and style meet
+            functionality and precision. Our selection of timepieces embodies
+            the very best in Swiss craftsmanship and engineering, ensuring that
+            you'll always have a reliable and stylish accessory on your wrist.
+          </p>
+          <p class="description">
+            At our premium watch collection, we believe that a watch is more
+            than just a timekeeping device – it's a statement piece that
+            reflects your personality and style. So why settle for anything less
+            than the best? Browse our collection today and discover the perfect
+            watch for you.
+          </p>
+        </article>
+        <figure>
+          <img
+            src="./images/watchstop.gif"
+            alt="about image"
+            width="892"
+            height="500"
+            class="image"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <script>
+      jQuery(document).ready(function ($) {
+        $("#checkbox").change(function () {
+          setInterval(function () {
+            moveRight();
+          }, 3000);
+        });
+
+        var slideCount = $("#slider ul li").length;
+        var slideWidth = $("#slider ul li").width();
+        var slideHeight = $("#slider ul li").height();
+        var sliderUlWidth = slideCount * slideWidth;
+
+        $("#slider").css({ width: slideWidth, height: slideHeight });
+
+        $("#slider ul").css({ width: sliderUlWidth, marginLeft: -slideWidth });
+
+        $("#slider ul li:last-child").prependTo("#slider ul");
+
+        function moveLeft() {
+          $("#slider ul").animate(
+            {
+              left: +slideWidth,
+            },
+            200,
+            function () {
+              $("#slider ul li:last-child").prependTo("#slider ul");
+              $("#slider ul").css("left", "");
+            }
+          );
+        }
+
+        function moveRight() {
+          $("#slider ul").animate(
+            {
+              left: -slideWidth,
+            },
+            200,
+            function () {
+              $("#slider ul li:first-child").appendTo("#slider ul");
+              $("#slider ul").css("left", "");
+            }
+          );
+        }
+
+        $("a.control_prev").click(function () {
+          moveLeft();
+        });
+
+        $("a.control_next").click(function () {
+          moveRight();
+        });
+      });
+    </script>
+  </body>
+</html>
