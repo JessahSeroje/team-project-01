@@ -135,3 +135,25 @@ article {
   background: url(./images/watchstop.gif),
     lightgray -1.141px -0.292px / 100.738% 101.058% no-repeat;
 }
+@media screen and (min-width: 768px) {
+  .hp-about {
+    padding: 64px 0;
+    width: 100%;
+    gap: 40px;
+  }
+  .container-title {
+    width: 768px;
+    padding: 0 32px;
+  }
+  .about-section {
+    width: 768px;
+    display: flex;
+    padding: 0 32px;
+  }
+  .about-title {
+    column-gap: 40px;
+  }
+  .about-section {
+    gap: 20px;
+  }
+}
